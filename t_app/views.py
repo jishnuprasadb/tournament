@@ -8,6 +8,7 @@ def home(request):
     team=Team.objects.all()
     return  render(request,"home.html",{"len":len(team)})
 
+#team registration
 def registration(request):
     if request.method=="POST":
         name=request.POST["name"]
@@ -53,6 +54,7 @@ def team_details(request,id):
 
     return render(request,'team_detail.html',{"player":players,"team":team,"len":len(all_team),"fix":zipped_lists})
 
+#generate fixture
 def fixture(request):
     all_team=Team.objects.all()
     team_list=[i.name for i in all_team]
@@ -80,6 +82,8 @@ def fixture(request):
     }
     return render(request,'fixture.html',context)
 
+
+#admin login
 def login_view(request):
     team=Team.objects.all()
     if request.method=="POST":
@@ -95,6 +99,7 @@ def login_view(request):
         else:
             return redirect('login_view')    
     return render(request,'login.html',{"len":len(team)})
+
 
 def admin_home(request):
     all_team=Team.objects.all()
@@ -126,5 +131,4 @@ def score(request):
         else:
             score=Score(match_no=match_no,score=score)
             score.save()
-            print("successs")
             return redirect('admin_home')
