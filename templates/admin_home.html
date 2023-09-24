@@ -1,0 +1,36 @@
+{% extends 'home.html' %}
+{% block content %}
+<h2 class="m-2">SCORE BOARD</h2>
+{% if len == 10 %}
+<table class="table table-bordered mt-5">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Match</th>
+            <th colspan="2">Score </th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        
+        {% for i in fix %}
+        <form method="post" action="{% url 'score' %}">{% csrf_token %}
+        <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{i.0}} &nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;{{i.1}}</td>
+            <td><input type="text" name="scores"><input type="hidden" name="match_no" value="{{forloop.counter}}"><button style="margin-left: 10px;" name="score" type="submit">Update</button></td>
+            <td>
+                {% for j in score %}
+                {% if j.match_no == forloop.parentloop.counter %}
+                <label for="">{{j.score}}</label>
+                {% endif %}
+                {% endfor %}
+            </td>
+            
+        </tr>
+        </form>
+        {% endfor %}
+    </tbody>
+</table>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,97 @@
+.img {
+    background-image: url('/static/img/football.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 1300px;
+    height: 700px;
+
+}
+ .img-contain {
+    color: rgb(243, 223, 223);
+    position: absolute;
+    margin-top: 600px;
+    margin-left: 500px;
+    font-size: 60PX;
+    font-weight: 800;
+    
+}
+.img-contain2 {
+    color: rgb(241, 241, 245);
+    position: absolute;
+    margin-top: 670px;
+    margin-left: 520px;
+    font-size: 20px;
+    font-weight: bolder;
+   
+    
+}
+
+.navbar .navbar-brand {
+    color: yellow;
+    font-weight: 900;
+    font-size: 300%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.navbar {
+    background-color: rgb(4, 4, 88);
+}
+
+.navbar-nav .nav-item .nav-link{
+    color: yellow;
+    font-size: 20px;
+}
+h1 {
+    color: rgb(126, 132, 10);
+    text-align: center;
+    font-size: 80px;
+}
+marquee {
+    color: red;
+    font-style: italic;
+    font-size: 25px;
+}
+.team-count {
+    color: rgb(20, 130, 5);
+    font-weight: bolder;
+    
+}
+
+footer {
+    background-color: #0e0220; 
+    color: white; 
+    text-align: center; 
+    padding: 20px 0; 
+    margin-top: 10px;
+}
+
+h3 {
+    
+    color: rgb(126, 132, 10);
+    text-align: center;
+    font-size: 40px;
+    margin-top: 10px;
+
+}
+.venue {
+    color: red;
+    text-align: center;
+    font-weight: 700;
+    padding: 5px;
+}
+h2 {
+    display: flex;
+    justify-content: center;
+    color: red;
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+a:hover {
+    color: blue;
+}
+
+
+

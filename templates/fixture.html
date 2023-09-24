@@ -1,0 +1,54 @@
+{% extends 'home.html' %}
+{% block content %}
+
+<h2 class="mt-2 mb-4">MATCH FIXTURE</h2>
+{% if len != 10 %}
+<h2>Fixture Will Be Shown After Completing Team Registration</h2>
+{% else %}
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+        </div>
+        <div class="col-4">
+            <h4>GROUP A</h4>
+            <ul>
+                {% for i in A %}
+                <li>{{i}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="col-3">
+            <h4>GROUP B</h4>
+            <ul>
+                {% for i in B %}
+                <li>{{i}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>     
+</div>
+<table class="table table-bordered mt-5">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Match</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Venue</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        {% for i in fix %}
+        <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{i.0.0}} &nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;{{i.0.1}}</td>
+            <td>{{i.1}}</td>
+            <td>{{i.2}}</td>
+            <td>{{i.3}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endif %}
+{% endblock %}

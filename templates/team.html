@@ -1,0 +1,16 @@
+{% extends 'home.html' %}
+{% block content %}
+<h2 class="m-2">REGISTERED TEAMS</h2>
+ {% for i in team%}
+
+ <div class="row">
+    <div class="col-5"></div>
+    <div class="col-7">
+        <div class="d-flex">
+            <h4>{{forloop.counter}}.</h4>
+            <h4><a href="{% url 'team_details' i.id %}">{{i.name}}</a></h4> 
+         </div>
+    </div>
+ </div>
+ {% endfor %}
+{% endblock %}

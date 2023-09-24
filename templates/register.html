@@ -1,0 +1,123 @@
+{% extends 'home.html' %}
+{% block content %}
+<h2 class="m-2">REGISTRATION FORM</h2>
+<form method="post">{% csrf_token %}
+<div class="container">
+    <div class="mt-4 col-6">
+        <label for="" class="form-label">Name of The team:</label>
+        <input type="text" class="form-control" id="" placeholder="" required name="name">
+    </div>
+    <div class="mt-1 col-6">
+        <label for="" class="form-label">Team Manager:</label>
+        <input type="text" class="form-control" id="" placeholder="" required name="manager">
+    </div>
+    <div class="mt-1 col-6">
+        <label for="" class="form-label">Team Coach:</label>
+        <input type="text" class="form-control" id="" placeholder="" required name="coach">
+    </div>
+    <div class="mt-1 col-6">
+        <label for="" class="form-label">Contact:</label>
+        <input type="number" class="form-control" id="" placeholder="" required name="contact">
+    </div>
+    <h4 class="mt-4 mb-2">Players List</h4>
+    <div class="row">
+        <div class="col-1">
+            <label for="" class="form-label">#</label>
+        </div>
+        <div class="col-5">
+            <label for="" class="form-label">Name:</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-1">
+            <label for="" class="form-label">1.</label>
+        </div>
+        <div class="col-5">
+            <input type="text" class="form-control" id="" placeholder="" required name="pname[]">
+        </div>
+    </div>
+    <div class="row mt-1">
+        <div class="col-1">
+            <label for="" class="form-label">2.</label>
+        </div>
+        <div class="col-5">
+            <input type="text" class="form-control" id="" placeholder="" required name="pname[]">
+        </div>
+    </div>
+    <div class="row mt-1">
+        <div class="col-1">
+            <label for="" class="form-label">3.</label>
+        </div>
+        <div class="col-5">
+            <input type="text" class="form-control" id="" placeholder="" required name="pname[]">
+        </div>
+    </div>
+    <div class="row mt-1">
+        <div class="col-1">
+            <label for="" class="form-label">4.</label>
+        </div>
+        <div class="col-5">
+            <input type="text" class="form-control" id="" placeholder="" required name="pname[]">
+        </div>
+    </div>
+    <div class="row mt-1">
+        <div class="col-1">
+            <label for="" class="form-label">5.</label>
+        </div>
+        <div class="col-5">
+            <input type="text" class="form-control" id="" placeholder="" required name="pname[]">
+        </div>
+    </div>
+    <div class="row mt-1">
+        <div class="col-1">
+            <label for="" class="form-label">6.</label>
+        </div>
+        <div class="col-5">
+            <input type="text" class="form-control" id="" placeholder="" required name="pname[]">
+        </div>
+    </div>
+    <div class="row mt-1">
+        <div class="col-1">
+            <label for="" class="form-label">7.</label>
+        </div>
+        <div class="col-5">
+            <input type="text" class="form-control" id="" placeholder="" required name="pname[]">
+        </div>
+    </div>
+    <div class="row mt-1">
+        <div class="col-1">
+            <label for="" class="form-label">8.</label>
+        </div>
+        <div class="col-5">
+            <input type="text" class="form-control" id="" placeholder="" required name="pname[]">
+        </div>
+    </div>
+    <div class="row mt-1">
+        <div class="col-1">
+            <label for="" class="form-label">9.</label>
+        </div>
+        <div class="col-5">
+            <input type="text" class="form-control" id="" placeholder="" required name="pname[]">
+        </div>
+    </div>
+    <div class="row mt-1">
+        <div class="col-1">
+            <label for="" class="form-label">10.</label>
+        </div>
+        <div class="col-5">
+            <input type="text" class="form-control" id="" placeholder="" required name="pname[]">
+        </div>
+    </div>
+    <div class="row mt-1">
+        <div class="col-1">
+            <label for="" class="form-label">11.</label>
+        </div>
+        <div class="col-5">
+            <input type="text" class="form-control" id="" placeholder="" required name="pname[]">
+        </div>
+    </div>
+    <input type="submit" class="btn btn-success mt-5 ">
+</form>
+</div>  
+
+{% endblock %}

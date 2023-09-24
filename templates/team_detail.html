@@ -1,0 +1,43 @@
+{% extends 'home.html' %}
+{% block content %}
+<h2 class="">{{team.name}}-Squad</h2>
+{% for i in player %}
+<div class="row">
+    <div class="col-5"></div>
+    <div class="col-3">
+        <div class="d-flex">
+            <h4>{{forloop.counter}}.</h4>
+            <h4>{{i.name}}</h4> 
+         </div>
+    </div>
+ </div>
+ {% endfor %}
+
+ {% if len == 10 %}
+ <table class="table table-bordered mt-5">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Match</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Venue</th>
+        </tr>
+    </thead>
+    <tbody>
+        <h2 class="mt-5 mb-4">MATCH FIXTURE</h2>
+        {% for i in fix %}
+        {% if i.0.0 == team.name or i.0.1 == team.name %} 
+        <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{i.0.0}} &nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;{{i.0.1}}</td>
+            <td>{{i.1}}</td>
+            <td>{{i.2}}</td>
+            <td>{{i.3}}</td>
+        </tr>
+        {% endif %}
+        {% endfor %}
+    </tbody>
+</table>
+{% endif %}
+{% endblock %}
